@@ -1,0 +1,17 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__)
+    ->exclude(['var', 'vendor']);
+
+return PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
+    ->setRules([
+        '@Symfony' => true,
+        'yoda_style' => false,
+        'phpdoc_align' => false,
+        'phpdoc_annotation_without_dot' => false,
+        'no_superfluous_phpdoc_tags' => false,
+        'concat_space' => ['spacing' => 'one'],
+    ])
+    ->setFinder($finder);
